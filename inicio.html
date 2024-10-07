@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-purple-500 p-6">
+ 
+    <header class="bg-purple-800 rounded-full">
+        <nav class="container mx-auto flex justify-between items-center p-2">
+            <a href="/" class="text-lg text-white hover:text-blue-500">Inicio</a>
+            <ul class="flex space-x-8">
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Menu</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Categorias</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Contactos</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Pagos y envios</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <div class="container">
+        <div class="inicie"></div>
+        <h1 class="text-3xl mb-2 font-bold p-6">REGISTRARSE:</h1>
+        </div>
+        <div class="name">
+            <label class="block text font-bold" for="name">Nombres</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="Name">
+        </div>
+        <div class="lastName"></div>
+            <label class="block text font-bold"  for="lastName">Apellido</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="lastName">
+        </div>
+        <div class="tel">
+            <label class="block text font-bold"  for="phone">Telefóno</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="phone">
+        </div>
+        <div class="gmail">
+            <label class="block text font-bold"  for="gmail">Correo Electrónico</label>  
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="gmail">  
+        </div>
+ 
+        <div class="">
+            <label class="block text font-bold"  for="gmail">Dirección</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="dress">
+        </div>
+        <div class="">
+            <label class="block text font-bold"  for="gmail">Fecha de nacimiento</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="date">
+        </div>
+        <div class="">
+            <label class="block text font-bold"  for="gmail">Edad</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="age">
+        </div>
+        <div class="">
+            <label class="block text font-bold"  for="gmail">Género</label>
+            <input class="bg-purple-300 p-3 rounded w-80" type="text" id="gender">
+        </div>
+   
+   
+    <button id="miBoton" onclick="cambiarPagina()" class="bg-blue-700 m-4 text-white font-bold py-2 px-4 rounded hover:bg-blue-900">
+        Enviar
+ 
+       <script>
+        document.getElementById("miBoton").addEventListener("click", function() {
+            window.location.href = "otraPagina.html";
+        });
+       </script>
+    </button>
+ 
+    <div class="flex justify-end items-start p-20 absolute top-2 right-2">
+        <img src="https://th.bing.com/th/id/OIP.GIXA0m3tNU3-i47WNLXO2QHaHl?rs=1&pid=ImgDetMain" alt="Logo" class="h-32 w-21 rounded-full">
+ 
+ 
+        <div class="flex space-x-4">
+           
+       
+    </div>
+</body>
+</html>

@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Valery´s Makeup</title>
 </head>
-<body>
-    
+<body class="bg-purple-500 font-sans">
+    <!-- Encabezado -->
+    <header class="bg-purple-900 text-white p-4">
+        <h1 class="text-4xl font-bold">Bienvenido a Valery´s Makeup</h1>
+        <nav class="mt-2">
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:underline">Inicio</a></li>
+                <li><a href="#" class="hover:underline">Consultas</a></li>
+                <li><a href="#" class="hover:underline">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flex justify-end items-start p-20 absolute top-4 right-6 w-full">
+        <img src="https://th.bing.com/th/id/OIP.GIXA0m3tNU3-i47WNLXO2QHaHl?rs=1&pid=ImgDetMain" alt="Logo" class="h-52 w-21 rounded-full mt-10">
+
+
+        <div class="flex justify-left space-x-4">
+           
+
+    <!-- Sección Principal -->
+    <main class="max-w-4xl mx-auto p-6">
+        <section class="bg-purple-200 rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold">¿Ya habías visitado nuestro sitio web antes?</h2>
+            <p class="mt-2 text-gray-700">Valery´s Makeup te ofrece productos con todo lo relacionado a la limpieza y belleza de tu rostro, a precios muy accesibles y de buena calidad.</p>
+        </section>
+
+        <section class="bg-purple-200 rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold">Entre nuestros productos encontraras:</h2>
+            <ul class="mt-2 list-disc list-inside text-gray-700">
+                <li>Maquillaje: gloss, brillos, labiales, sombras, polvo, iluminador, blush, deliniador etc.</li>
+                <li>Cremas: humectantes, hidratantes, aclarantes, nutritivas, para ojeras, etc. </li>
+                <li>Mascarillas: de aguacate, con baba de caracol, de carbón, etc.</li>
+                <li>Skin care: aceites, exfoliantes, agua de rosas, etc.</li>
+            </ul>
+        </section>
+    </main>
+ <div class="">
+     <button id="miBotoon" onclick="cambiarPagina()" class="bg-black mt-20 mb-20 text-white font-semibold p-1 rounded-full w-21 hover:bg-purple-900">
+       
+        Iniciar sesión
+        <script>
+         document.getElementById("miBotoon").addEventListener("click", function() {
+             window.location.href = "index.html";
+        });
+        </script>
+     </button>
+
+     <button id="miBotun" onclick="cambiarPagina()" class="bg-black mt-20 mb-20 text-white font-semibold p-1 rounded-full w-18 hover:bg-purple-900">
+       
+        Registrarse
+         <script>
+          document.getElementById("miBotun").addEventListener("click", function() {
+             window.location.href = "inicio.html";
+         });
+        </script>
+     </button>
+  </div>
 </body>
 </html>

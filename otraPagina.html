@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-purple-500 p-6">
+    <header class="bg-purple-800 rounded-full">
+        <nav class="container mx-auto flex justify-between items-center p-2">
+            <a href="/" class="text-lg text-white hover:text-blue-500">Inicio</a>
+            <ul class="flex space-x-8">
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Menu</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Categorias</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Contactos</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Pagos y envios</a></li>
+                <li><a href="/" class="text-lg text-white hover:text-blue-500">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="flex mt-10">
+        <div class="relative w-1/2"> 
+            <div class="absolute left-2 top-3.5">
+                <img src="https://png.pngtree.com/element_our/20190528/ourlarge/pngtree-scientific-research-cartoon-magnifying-glass-image_1182286.jpg" alt="Icono de búsqueda" class="h-5 w-5">
+            </div>
+            <input
+                type="text"
+                placeholder="Buscar producto"
+                class="w-full h-12 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            />
+            <div class="absolute left-3 top-2.5">
+                <svg
+                    class="h-5 w-5 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                    />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+        <div class="flex flex-row justify-left gap-6 w-full mt-4 mb-6">
+            <div class="border rounded-lg p-4 bg-white w-80 cursor-pointer" onclick="openModal('Rubor liquido sheglam', 'Rubor color rosado, Marca SHEGLAM, Precio$3.00', 'https://th.bing.com/th/id/OIP.Ib-_hsgmwGiG_3LVmPOrvwHaHa?rs=1&pid=ImgDetMain')">
+                <img src="https://th.bing.com/th/id/OIP.Ib-_hsgmwGiG_3LVmPOrvwHaHa?rs=1&pid=ImgDetMain">
+                <h3 class="text-lg font-semibold mt-2">Rubor liquido</h3>
+            </div>
+        <div class="flex flex-row justify-center items-start gap-6">
+                <div class="border rounded-lg p-4 bg-white w-80 cursor-pointer" onclick="openModal('Mascara de pestañas', 'Mascara de pestañas color negro, con aceite de hueso de mamey para mayor crecimiento, Precio$2.50', 'https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/7501611800483_2.jpg?scale=550></div>')">
+                    <img src="https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/7501611800483_2.jpg?scale=550">
+                <h3 class="text-lg font-semibold mt-2">Mascara de pestañas</h3>
+        </div>
+        <div class="flex flex-row justify-center gap-6">
+            <div class="border rounded-lg p-4 bg-white w-80 cursor-pointer" onclick="openModal('Enchinador de pestañas', 'Enchinador de pestañas con separador; en colores rosado, morado y celeste, Precio$1.50', 'https://flamantrose.tn/wp-content/uploads/2023/03/Recourbe-Cils-Professionnel.png')">
+                <img src="https://flamantrose.tn/wp-content/uploads/2023/03/Recourbe-Cils-Professionnel.png">
+            <h3 class="text-lg font-semibold mt-2">Enchinador de pestañas</h3>
+    </div>
+    <div class="flex flex-row justify-center gap-6">
+        <div class="border rounded-lg p-4 bg-white w-80 cursor-pointer" onclick="openModal('Polvo traslucido', 'Polvo traslucido marca CHANEL, Precio$2.25', 'https://m.media-amazon.com/images/I/41JzxCZ3DkL._SL500_.jpg')">
+            <img src="https://m.media-amazon.com/images/I/41JzxCZ3DkL._SL500_.jpg">
+        <h3 class="text-lg font-semibold mt-2">Polvo traslucido</h3>
+</div>
+    
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white rounded-lg p-5 relative">
+            <button class="absolute top-2 right-2 text-gray-600" onclick="closeModal()">✖</button>
+            <img id="modalImage" src="" alt="" class="w-full h-64 object-cover rounded-md mb-4">
+            <h3 id="modalTitle" class="text-lg font-semibold"></h3>
+            <p id="modalDescription" class="text-gray-600"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, description, imageSrc) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalDescription').textContent = description;
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
