@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="bg-purple-500 flex items-center justify-center h-screen">
+
+
+    <div class="bg-white p-6 rounded-lg shadow-md w-96">
+        <h2 class="text-2xl font-bold mb-6 text-center">Crear cuenta</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="registro-form">
+            <div class="mb-4">
+                <label class="block text-gray-700" for="nombre">Usuario</label>
+                <input type="text" id="usuario" name="usuario" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700" for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-gray-700" for="contraseña">Número de recuperación</label>
+                <input type="num" id="cel" name="cel" class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+
+           
+            <button id="miBoton" onclick="cambiarPagina()" class="bg-blue-700 m-4 text-white font-bold py-2 px-4 rounded hover:bg-blue-900">
+                Enviar
+         
+               <script>
+                document.getElementById("miBoton").addEventListener("click", function() {
+                    window.location.href = "otraPagina.html";
+                });
+               </script>
+            </button>
+
+
+        <div id="success-message" class="hidden mt-4 text-green-600 text-center">
+            ¡Registro exitoso!
+        </div>
+
+        <div id="error-message" class="hidden mt-4 text-red-600 text-center">
+            Ocurrió un error. Intenta nuevamente.
+        </div>
+    </div>
+
+    
+</body>
+</html>
